@@ -46,8 +46,22 @@ public class ThemeParkTest {
 
     @Test
     public void canGetReviewedObjects() {
-        assertEquals(2, themePark.getAllReviewed());
+        assertEquals(0, themePark.getAllReviewed().size());
     }
+
+    @Test
+    public void canAddAttraction() {
+        themePark.add(playground);
+        assertEquals(1, themePark.getAllReviewed().size());
+    }
+
+    @Test
+    public void canAddStall() {
+        themePark.add(tobaccoStall);
+        themePark.add(iceCreamStall);
+        assertEquals(2, themePark.getAllReviewed().size());
+    }
+
 
     @Test
     public void canVisitAnAttraction() {
