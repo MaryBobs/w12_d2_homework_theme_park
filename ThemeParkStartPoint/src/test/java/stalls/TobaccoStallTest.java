@@ -14,7 +14,7 @@ public class TobaccoStallTest {
 
     @Before
     public void setUp() throws Exception {
-        tobaccoStall = new TobaccoStall("Jacks Drum", "Jack Jarvis", ParkingSpot.B1);
+        tobaccoStall = new TobaccoStall("Jacks Drum", "Jack Jarvis", ParkingSpot.B1, 5);
         visitor1 = new Visitor(12, 1.2, 20.00);
         visitor2 = new Visitor(18, 2.2, 30.00);
     }
@@ -32,6 +32,11 @@ public class TobaccoStallTest {
     @Test
     public void hasParkingSpot() {
         assertEquals(ParkingSpot.B1, tobaccoStall.getParkingSpot());
+    }
+
+    @Test
+    public void hasRating() {
+        assertEquals(5, tobaccoStall.getRating());
     }
 
     @Test
