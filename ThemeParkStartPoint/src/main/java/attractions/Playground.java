@@ -15,5 +15,5 @@ public class Playground extends Attraction implements ISecurity {
         else {
             return false; }
         }
-    }
+}
 
